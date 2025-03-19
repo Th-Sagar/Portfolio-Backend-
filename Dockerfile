@@ -47,8 +47,7 @@ FROM openjdk:21-jdk-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the .env file manually (Ensure .env exists in your repo)
-COPY .env /app/.env
+
 
 # Copy the JAR file into the container
 COPY target/portfolio-0.0.1-SNAPSHOT.jar app.jar
