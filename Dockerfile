@@ -48,9 +48,12 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 
-
 # Copy the JAR file into the container
 COPY target/portfolio-0.0.1-SNAPSHOT.jar app.jar
 
+
+EXPOSE 9090
+
+
 # Ensure environment variables are loaded before running the app
-ENTRYPOINT ["sh", "-c", "export $(grep -v '^#' /app/.env | xargs) && java -jar /app/app.jar"]
+ENTRYPOINT ["java" ,"-jar", "app.jar"]
