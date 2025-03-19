@@ -1,30 +1,13 @@
-
-
-ENV PORT=${PORT}
-ENV DB_URL=${DB_URL}
-ENV DB_DATABASE=${DB_DATABASE}
-ENV DB_INDEX=${DB_INDEX}
-
-ENV SMTP_HOST_MAIL=${SMTP_HOST_MAIL}
-ENV SMTP_PORT=${SMTP_PORT}
-ENV SMTP_MAIL=${SMTP_MAIL}
-ENV SMTP_PASSWORD=${SMTP_PASSWORD}
-ENV SMTP_AUTH=${SMTP_AUTH}
-ENV SMTP_ENABLE=${SMTP_ENABLE}
-
 # Use the official OpenJDK 21 image
 FROM openjdk:21-jdk-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the .env file into the container (Make sure .env is in the same directory as your Dockerfile)
-#COPY .env /app/.env
-
 # Copy the JAR file into the container
 COPY target/portfolio-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose the application port
+# Expose the application port (Replace 9090 with your actual port if different)
 EXPOSE 9090
 
 # Run the Spring Boot application
