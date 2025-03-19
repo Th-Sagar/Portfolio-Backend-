@@ -9,13 +9,16 @@ public class PortfolioApplication {
 
 	public static void main(String[] args) {
 
+		System.out.println("SMTP_HOST_MAIL: " + System.getProperty("SMTP_HOST_MAIL"));
+
+
 		Dotenv dotenv = Dotenv.load();
 		System.setProperty("PORT", dotenv.get("PORT"));
 		System.setProperty("DB_URL", dotenv.get("DB_URL"));
 		System.setProperty("DB_DATABASE", dotenv.get("DB_DATABASE"));
 		System.setProperty("DB_INDEX", dotenv.get("DB_INDEX"));
 
-		System.setProperty("SMTP_HOST", dotenv.get("SMTP_HOST"));
+		System.setProperty("SMTP_HOST_MAIL", dotenv.get("SMTP_HOST_MAIL"));
 		System.setProperty("SMTP_PORT", dotenv.get("SMTP_PORT"));
 		System.setProperty("SMTP_MAIL", dotenv.get("SMTP_MAIL"));
 		System.setProperty("SMTP_PASSWORD", dotenv.get("SMTP_PASSWORD"));
