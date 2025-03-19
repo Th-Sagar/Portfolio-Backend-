@@ -1,0 +1,7 @@
+com\portfolio\portfolio\controller\MessageController.class
+com\portfolio\portfolio\PortfolioApplication.class
+com\portfolio\portfolio\model\MessageModel.class
+com\portfolio\portfolio\repository\MessageRepository.class
+com\portfolio\portfolio\service\MessageService.class
+com\portfolio\portfolio\controller\HealthController.class
+com\portfolio\portfolio\service\EmailService.class
