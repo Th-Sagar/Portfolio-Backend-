@@ -5,6 +5,8 @@ import com.portfolio.portfolio.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MessageService {
 
@@ -16,5 +18,9 @@ public class MessageService {
        MessageModel savedMessage = messageRepository.save(message);
        return savedMessage;
 
+    }
+
+    public List<MessageModel> findAll(){
+       return messageRepository.findAll();
     }
 }
